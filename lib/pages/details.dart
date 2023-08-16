@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'profile.dart';
+import 'course.dart';
 
 class Details extends StatefulWidget {
   const Details({Key? key}) : super(key: key);
@@ -104,7 +105,7 @@ class _DetailsState extends State<Details> {
         onPressed: () {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => Profile()), // Replace with the appropriate details page widget
+            MaterialPageRoute(builder: (context) => Course()), // Replace with the appropriate details page widget
           );
           // Add the action you want to perform here
         },

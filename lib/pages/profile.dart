@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
-//import 'package:url_launcher/url_launcher.dart';
+//import 'package:url_launcher/url_launcher_string.dart';
+import 'details.dart';
+import 'language.dart';
+// import 'package:url_launcher/url_launcher.dart';
+// import 'package:flutter_alarm_clock/flutter_alarm_clock.dart';
+
 
 void main() => runApp(MaterialApp(
   home: Profile(),
@@ -13,8 +18,18 @@ class Profile extends StatefulWidget {
 }
 
 class _ProfileState extends State<Profile> {
+  // bool _loading;
+  // double _progressValue;
   @override
+
+  // void initState() {
+  //   super.initState();
+  //   _loading = false;
+  //   _progressValue = 0.0;
+  // }
+
   Widget build(BuildContext context) {
+
     return Scaffold(
       backgroundColor: Color(0xFF213555),
       appBar: AppBar(
@@ -24,6 +39,7 @@ class _ProfileState extends State<Profile> {
         elevation: 0,
       ),
       body: Center(
+        //print('in profile-', inputname, dropdownvalue);
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
@@ -43,7 +59,7 @@ class _ProfileState extends State<Profile> {
                   Text(
                     'Your Name',
                     style: TextStyle(
-                      color: Colors.white,
+                      color: Colors.lightBlueAccent,
                       fontSize: 24,
                     ),
                   ),
@@ -67,7 +83,7 @@ class _ProfileState extends State<Profile> {
                   Text(
                     'English',
                     style: TextStyle(
-                      color: Colors.white,
+                      color: Colors.lightBlueAccent,
                       fontSize: 24,
                     ),
                   ),
@@ -91,7 +107,7 @@ class _ProfileState extends State<Profile> {
                   Text(
                     '12',
                     style: TextStyle(
-                      color: Colors.white,
+                      color: Colors.lightBlueAccent,
                       fontSize: 24,
                     ),
                   ),
@@ -124,9 +140,10 @@ class _ProfileState extends State<Profile> {
                       color: Color(0xFFF5EFE7),
                       borderRadius: BorderRadius.all(Radius.circular(10.0))),
                   child: new Center(
-                    child: new Text("Progress Bar",
-                      style: TextStyle(fontSize: 22, color: Colors.black),
-                      textAlign: TextAlign.center,),
+                    child: CircularProgressIndicatorApp()
+                    // child: new Text("Progress Bar",
+                    //   style: TextStyle(fontSize: 22, color: Colors.black),
+                    //   textAlign: TextAlign.center,),
                   )),
             ),
             //SizedBox(height: 10),
@@ -177,6 +194,7 @@ class _ProfileState extends State<Profile> {
                   SizedBox(width: 110),
                   TextButton.icon(
                       onPressed: ()  {
+                        // FlutterAlarmClock.createAlarm(hour: 23, minutes: 59);
                       },
                       icon: Icon(Icons.keyboard_arrow_right,
                         color: Colors.white,
@@ -228,7 +246,7 @@ class _ProfileState extends State<Profile> {
                   ),
                   SizedBox(width: 60),
                   TextButton.icon(
-                      onPressed: ()  {
+                      onPressed: () {
                       },
                       icon: Icon(Icons.keyboard_arrow_right,
                         color: Colors.white,
@@ -268,5 +286,15 @@ class _ProfileState extends State<Profile> {
         ),
       ),
     );
+  }
+}
+
+// This is the stateless widget that the main application instantiates.
+class CircularProgressIndicatorApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return CircularProgressIndicator(
+      backgroundColor: Colors.red,
+      strokeWidth: 8,);
   }
 }

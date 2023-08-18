@@ -1,7 +1,9 @@
+import 'package:edubridge/pages/language.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'profile.dart';
 import 'details.dart';
+import 'language.dart';
 
 class Loading extends StatefulWidget {
   const Loading({Key? key}) : super(key: key);
@@ -57,7 +59,7 @@ class _LoadingState extends State<Loading> {
         onPressed: () {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => Details()), // Replace with the appropriate details page widget
+            MaterialPageRoute(builder: (context) => Language()), // Replace with the appropriate details page widget
           );
           // Add the action you want to perform here
         },

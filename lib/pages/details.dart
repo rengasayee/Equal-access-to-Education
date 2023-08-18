@@ -12,6 +12,7 @@ class Details extends StatefulWidget {
 class _DetailsState extends State<Details> {
 
   String dropdownvalue = '12';
+  String inputname = '';
 
   var classstud = ['12','11','10','9','8','7','6','5','4','3','2','1'];
   @override
@@ -47,6 +48,12 @@ class _DetailsState extends State<Details> {
               padding: const EdgeInsets.all(30.0),
               child: TextField(
                 style: TextStyle(color: Colors.white),
+                onChanged: (value) {
+                setState(() {
+                  inputname = value;
+                  print(inputname);
+                });
+                },
                 decoration: const InputDecoration(
                   focusedBorder: OutlineInputBorder(
                     borderSide: BorderSide(color: Colors.white),
@@ -98,6 +105,7 @@ class _DetailsState extends State<Details> {
                 },
               ),
             ),
+
           ],
         )
       ),

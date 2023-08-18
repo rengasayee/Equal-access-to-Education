@@ -3,6 +3,7 @@ import 'pages/home.dart';
 import 'pages/profile.dart';
 import 'pages/loading.dart';
 import 'pages/course.dart';
+import 'pages/chemistry.dart';
 
 void main() => runApp(MaterialApp(
   initialRoute: '/',
@@ -11,6 +12,7 @@ void main() => runApp(MaterialApp(
       //'/home': (context) => Home(),
       //'/profile' : (context) => Profile(),
       '/course' : (context) => Course(),
+      //'/chemistry' : (context) => Chemistry(),
     }
     ));
 
